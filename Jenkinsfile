@@ -13,9 +13,7 @@ pipeline {
     }
     stage('Ejecutar Calculadora') {
       steps {
-        script {
-          sh 'javac CalculadoraLogic.java'
-        }
+        echo 'estoy aqui' 
       }
     }
     stage('Verificacion') {
