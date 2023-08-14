@@ -4,6 +4,7 @@ pipeline {
     maven 'mavenTool'
     jdk 'openjdk11'
     jdk 'openjdk8'
+    gradle 'grandle-8.2'
   }
   stages {
     stage('Inicio') {
@@ -16,6 +17,8 @@ pipeline {
         script {
           mvn compile
           mvn test
+          sh 'cd src'
+          sh 'mvn --version'
         }
       }
     }
