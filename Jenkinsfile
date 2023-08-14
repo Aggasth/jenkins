@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Ejecutar Calculadora') {
       steps {
-        sh 'src/main/java/co/edu/ejemplo/calculadora/CalculadoraLogic.java'
+        sh 'javac CalculadoraLogic.java'
       }
     }
     stage('Verificacion') {
