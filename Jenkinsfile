@@ -1,16 +1,23 @@
 pipeline {
   agent any
   stages {
-    stage('Branch') {
+    stage('Inicio') {
       steps {
-        echo 'Welcome!'
+        echo '¡Bienvenido! Comienza la ejecución'
       }
     }
-
-    stage('') {
+    stage('Clonar Repositorio') {
       steps {
-        sleep 1
+        git clone 'https://github.com/Aggasth/jenkins.git'
       }
+    }
+    stage('Ejecutar Calculadora') {
+      steps {
+        sh 'src/main/java/co/edu/ejemplo/calculadora/CalculadoraLogic.java'
+      }
+    }
+    stage('Verificacion') {
+      echo 'Ejecutado correctamente!'
     }
 
   }
