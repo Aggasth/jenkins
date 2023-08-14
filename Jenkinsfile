@@ -9,7 +9,7 @@ pipeline {
     stage('Ejecutar Calculadora') {
       steps {
         script {
-          sh 'javac CalculadoraLogic.java'
+          mvn test
         }
       }
     }
