@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Clonar Repositorio') {
       steps {
-        git clone 'https://github.com/Aggasth/jenkins.git'
+        git 'https://github.com/Aggasth/jenkins.git'
       }
     }
     stage('Ejecutar Calculadora') {
