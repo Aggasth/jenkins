@@ -6,14 +6,11 @@ pipeline {
         echo '¡Bienvenido! Comienza la ejecución'
       }
     }
-    stage('Clonar Repositorio') {
-      steps {
-        git clone 'https://github.com/Aggasth/jenkins.git'
-      }
-    }
     stage('Ejecutar Calculadora') {
       steps {
-        echo 'estoy aqui' 
+        script {
+          sh 'javac CalculadoraLogic.java'
+        }
       }
     }
     stage('Verificacion') {
