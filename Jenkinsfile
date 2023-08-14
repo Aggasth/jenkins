@@ -9,13 +9,9 @@ pipeline {
     stage('Ejecutar Calculadora') {
       steps {
         script {
+          mvn compile
           mvn test
         }
-      }
-    }
-    stage('Verificacion') {
-      steps {
-        echo 'Ejecutado correctamente!'
       }
     }
   }
