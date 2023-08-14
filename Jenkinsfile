@@ -1,5 +1,10 @@
 pipeline {
   agent any
+  tools {
+    maven 'mavenTool'
+    jdk 'openjdk11'
+    jdk 'openjdk8'
+  }
   stages {
     stage('Inicio') {
       steps {
