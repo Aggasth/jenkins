@@ -17,8 +17,9 @@ pipeline {
       }
     }
     stage('Verificacion') {
-      echo 'Ejecutado correctamente!'
+      steps {
+        echo 'Ejecutado correctamente!'
+      }
     }
-
   }
 }
